@@ -1,5 +1,5 @@
 # Bubble Sort
-
+import random
 
 def bubble_sort(list: list)->None:
     switched = True
@@ -16,10 +16,11 @@ def bubble_sort(list: list)->None:
     return
 
 def main():
-    nums = [4, 3, 324, 43, 2, 3]
+    nums = [random.randint(1, 99) for i in range(10)]
     print(nums)
     bubble_sort(nums)
     print(nums)
                   
-main()
+if __name__ == "__main__":
+    main()
 
