@@ -1,6 +1,5 @@
 import random
 
-
 def selection_sort(list: list)->None:
     for i in range(len(list)):
         lowest_num = list[i]
