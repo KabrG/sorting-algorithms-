@@ -1,6 +1,5 @@
 import random 
 
-
 def bogo_sort(list: list)->None:
     ordered = False
 
