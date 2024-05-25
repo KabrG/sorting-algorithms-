@@ -1,28 +1,24 @@
 import random
 
+def insertion_sort(list: list)->None:
+    for i in range(len(list) - 1):
+        element = list.pop(i + 1) 
+        idx = i + 1
+        
+        for j in range(i + 1):
+            if list[j] > element:
+                idx = j
+                break
 
-def selection_sort(list: list)->None:
-    for i in range(len(list)):
-        lowest_num = list[i]
-        idx = i
+        list.insert(idx, element)
+    return
 
-        for j in range(len(list) - i):
-            if list[j+i] < lowest_num:
-                lowest_num = list[j+i]
-                idx = j + i
-
-        temp = list[i]
-        list[i] = lowest_num
-        list[idx] = temp
-
-
-def main()->None:
+def main():
     nums = [random.randint(1, 99) for i in range(10)]
     print(nums)
-    selection_sort(nums)
+    insertion_sort(nums)
     print(nums)
-                  
+
 if __name__ == "__main__":
     main()
-
 
