@@ -1,4 +1,3 @@
-# Bubble Sort
 import random
 
 def bubble_sort(list: list)->None:
